@@ -8,7 +8,7 @@
 
     <div class="prose dark:prose-invert max-w-none">
       <p>
-        Hi, I'm <strong>horaoen</strong>. Welcome to my blog.
+        Hi, I'm <strong>horanf</strong>. Welcome to my blog.
       </p>
       <p>
         This is a minimalist blog built with Vue 3, Tailwind CSS, and Markdown.
