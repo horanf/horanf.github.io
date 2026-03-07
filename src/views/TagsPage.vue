@@ -3,18 +3,22 @@ import { computed } from 'vue'
 import { getAllTags, getPostsByTag } from '@/utils/posts'
 
 const tags = computed(() =>
-  getAllTags().map((tag) => ({
+  getAllTags().map(tag => ({
     name: tag,
     count: getPostsByTag(tag).length,
-  }))
+  })),
 )
 </script>
 
 <template>
   <div>
     <section class="mb-12">
-      <h1 class="text-3xl font-bold tracking-tight mb-2">Tags</h1>
-      <p class="text-neutral-500 dark:text-neutral-500">Browse posts by topic.</p>
+      <h1 class="text-3xl font-bold tracking-tight mb-2">
+        Tags
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-500">
+        Browse posts by topic.
+      </p>
     </section>
 
     <div class="flex flex-wrap gap-3">

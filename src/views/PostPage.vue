@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watchEffect } from 'vue'
-import { getPostBySlug } from '@/utils/posts'
 import { renderMarkdown } from '@/utils/markdown'
+import { getPostBySlug } from '@/utils/posts'
 
 const props = defineProps<{ slug: string }>()
 
@@ -33,8 +33,12 @@ function formatDate(date: string): string {
         <span>&middot;</span>
         <time :datetime="post.date">{{ formatDate(post.date) }}</time>
       </div>
-      <h1 class="text-3xl font-bold tracking-tight mb-3">{{ post.title }}</h1>
-      <p class="text-neutral-500 dark:text-neutral-500">{{ post.description }}</p>
+      <h1 class="text-3xl font-bold tracking-tight mb-3">
+        {{ post.title }}
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-500">
+        {{ post.description }}
+      </p>
       <div class="flex gap-2 mt-4">
         <RouterLink
           v-for="tag in post.tags"
@@ -51,8 +55,12 @@ function formatDate(date: string): string {
   </div>
 
   <div v-else class="text-center py-20">
-    <h1 class="text-2xl font-bold mb-2">Post not found</h1>
-    <p class="text-neutral-500 mb-6">The post you're looking for doesn't exist.</p>
+    <h1 class="text-2xl font-bold mb-2">
+      Post not found
+    </h1>
+    <p class="text-neutral-500 mb-6">
+      The post you're looking for doesn't exist.
+    </p>
     <RouterLink to="/" class="text-sm underline underline-offset-4 hover:text-neutral-600 dark:hover:text-neutral-400">
       ← Go back home
     </RouterLink>

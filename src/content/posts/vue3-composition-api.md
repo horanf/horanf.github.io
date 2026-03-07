@@ -12,7 +12,7 @@ Vue 3 introduced the Composition API as a new way to organize component logic. C
 ### Reactive State
 
 ```typescript
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const count = ref(0)
 const doubled = computed(() => count.value * 2)
@@ -27,7 +27,7 @@ function increment() {
 The real power comes from **composables** — reusable logic extracted into functions:
 
 ```typescript
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 export function useMousePosition() {
   const x = ref(0)

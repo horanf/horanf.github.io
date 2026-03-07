@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { getPostsByTag } from '@/utils/posts'
 import PostCard from '@/components/PostCard.vue'
+import { getPostsByTag } from '@/utils/posts'
 
 const props = defineProps<{ tag: string }>()
 
@@ -19,7 +19,9 @@ const posts = computed(() => getPostsByTag(props.tag))
       <h1 class="text-3xl font-bold tracking-tight mb-2">
         #{{ tag }}
       </h1>
-      <p class="text-neutral-500 dark:text-neutral-500">{{ posts.length }} post{{ posts.length !== 1 ? 's' : '' }}</p>
+      <p class="text-neutral-500 dark:text-neutral-500">
+        {{ posts.length }} post{{ posts.length !== 1 ? 's' : '' }}
+      </p>
     </section>
 
     <div class="divide-y divide-neutral-100 dark:divide-neutral-800/50">

@@ -49,10 +49,10 @@ Each post includes YAML frontmatter for metadata:
 
 ```yaml
 ---
-title: "My Post Title"
-date: "2026-03-07"
-tags: ["vue", "markdown"]
-description: "A brief description."
+title: My Post Title
+date: 2026-03-07
+tags: [vue, markdown]
+description: A brief description.
 ---
 ```
 

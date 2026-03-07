@@ -1,6 +1,6 @@
+import { usePreferredDark } from '@vueuse/core'
 import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
-import { usePreferredDark } from '@vueuse/core'
 
 export const useThemeStore = defineStore('theme', () => {
   const prefersDark = usePreferredDark()

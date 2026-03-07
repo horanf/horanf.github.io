@@ -1,5 +1,6 @@
+import type { Highlighter } from 'shiki'
 import { Marked } from 'marked'
-import { createHighlighter, type Highlighter } from 'shiki'
+import { createHighlighter } from 'shiki'
 
 let highlighter: Highlighter | null = null
 
@@ -43,7 +44,8 @@ export async function renderMarkdown(content: string): Promise<string> {
               dark: 'github-dark',
             },
           })
-        } catch {
+        }
+        catch {
           return `<pre><code class="language-${language}">${text}</code></pre>`
         }
       },

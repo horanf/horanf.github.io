@@ -1,4 +1,9 @@
-import type { Post, PostMeta, PostFrontmatter } from '@/types/post'
+import type { Post, PostFrontmatter, PostMeta } from '@/types/post'
+
+const MD_EXT_RE = /\.md$/
+const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/
+const QUOTE_WRAP_RE = /^["'].*["']$/
+const QUOTE_TRIM_RE = /^["']|["']$/g
 
 const postModules = import.meta.glob('@/content/posts/*.md', {
   query: '?raw',
@@ -8,12 +13,13 @@ const postModules = import.meta.glob('@/content/posts/*.md', {
 
 function parseSlug(path: string): string {
   const filename = path.split('/').pop() || ''
-  return filename.replace(/\.md$/, '')
+  return filename.replace(MD_EXT_RE, '')
 }
 
-function parseFrontmatter(raw: string): { data: Record<string, unknown>; content: string } {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/)
-  if (!match) return { data: {}, content: raw }
+function parseFrontmatter(raw: string): { data: Record<string, unknown>, content: string } {
+  const match = raw.match(FRONTMATTER_RE)
+  if (!match)
+    return { data: {}, content: raw }
 
   const yamlBlock = match[1] ?? ''
   const content = match[2] ?? ''
@@ -21,7 +27,8 @@ function parseFrontmatter(raw: string): { data: Record<string, unknown>; content
 
   for (const line of yamlBlock.split('\n')) {
     const colonIndex = line.indexOf(':')
-    if (colonIndex === -1) continue
+    if (colonIndex === -1)
+      continue
     const key = line.slice(0, colonIndex).trim()
     let value: unknown = line.slice(colonIndex + 1).trim()
 
@@ -30,11 +37,11 @@ function parseFrontmatter(raw: string): { data: Record<string, unknown>; content
       value = value
         .slice(1, -1)
         .split(',')
-        .map((s) => s.trim().replace(/^["']|["']$/g, ''))
+        .map(s => s.trim().replace(QUOTE_TRIM_RE, ''))
         .filter(Boolean)
     }
     // Strip quotes from strings
-    else if (typeof value === 'string' && /^["'].*["']$/.test(value)) {
+    else if (typeof value === 'string' && QUOTE_WRAP_RE.test(value)) {
       value = value.slice(1, -1)
     }
 
@@ -67,7 +74,7 @@ export function getPosts(): PostMeta[] {
 }
 
 export function getPostBySlug(slug: string): Post | undefined {
-  return cachedPosts.find((post) => post.slug === slug)
+  return cachedPosts.find(post => post.slug === slug)
 }
 
 export function getAllTags(): string[] {
@@ -77,9 +84,9 @@ export function getAllTags(): string[] {
       tagSet.add(tag)
     }
   }
-  return Array.from(tagSet).sort()
+  return [...tagSet].toSorted()
 }
 
 export function getPostsByTag(tag: string): PostMeta[] {
-  return getPosts().filter((post) => post.tags.includes(tag))
+  return getPosts().filter(post => post.tags.includes(tag))
 }

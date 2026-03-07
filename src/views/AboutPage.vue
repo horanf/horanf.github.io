@@ -1,7 +1,9 @@
 <template>
   <div>
     <section class="mb-12">
-      <h1 class="text-3xl font-bold tracking-tight mb-2">About</h1>
+      <h1 class="text-3xl font-bold tracking-tight mb-2">
+        About
+      </h1>
     </section>
 
     <div class="prose dark:prose-invert max-w-none">
