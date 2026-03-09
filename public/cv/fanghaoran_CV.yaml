@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.7/schema.json
+cv:
+  name: 方浩冉
+  headline: Java开发工程师
+  location: 武汉
+  email: horaoen@gmail.com
+  photo:
+  phone: +86 15137667148
+  website: https://horanf.github.io
+  social_networks:
+    - network: GitHub
+      username: horanf
+  custom_connections:
+  sections:
+    个人总结:
+      - 3年Java开发经验：专注于后端开发，主导多个大型分布式系统设计与开发，具备丰富的微服务、高并发、数据库优化经验。
+      - 技术深度：深入理解Spring生态、MySQL调优、Redis高可用设计，具备复杂问题定位与性能优化能力。熟悉CAP、BASE等分布式理论，对于常见的分布式事务方案（如TCC、AP）有所了解。理解Spring Cloud Alibaba微服务架构，使用过 Nacos、Dubbo、Sentinel、Load Balancer等组件。
+      - 全流程经验：从需求分析到系统落地，主导项目全生命周期管理，擅长跨团队协作与技术方案落地。
+    教育背景:
+      - institution: 滁州学院
+        area: 计算机科学与技术
+        degree: 本科
+        start_date: 2019-09
+        end_date: 2023-07
+    工作经历:
+      - company: 南京华苏科技有限公司
+        position: Java开发工程师 / 项目组长
+        start_date: 2022-07
+        end_date: 2025-05
+        highlights:
+          - 主导中国铁塔产业园运营管理系统核心模块开发与团队管理，系统日均处理5000+工单，服务超10000用户。
+          - 负责HOWSO数藏系统核心模块开发，参与项目高可用高并发关键性技术问题设计和决策，实现最大峰值400QPS抢购功能。
+          - 负责中国铁塔数字用车系统全流程开发，优化后接口响应速度提升400%。
+    项目经验:
+      - name: 中国铁塔产业园运营管理系统
+        summary: 核心开发 / 项目组长。基于 Spring Cloud、MyBatis-Plus、MySQL/达梦、Redis、Elasticsearch
+        start_date: 2023-07
+        end_date: present
+        highlights:
+          - 基于Spring Cloud搭建微服务架构，集成Eureka服务注册与配置中心，保障系统高可用。使用MyBatis-Plus完成核心业务模块开发。
+          - 主导MySQL迁移至达梦数据库，完成数据迁移、SQL适配及性能调优；通过索引重建、批量执行等优化慢SQL，接口响应时间提升50%。
+          - 基于普元BPS流程平台封装通用流程服务，标准化20+工单流程；开发工单数据埋点功能，实现接单/处理超时等自动化提醒。
+          - 完成物资采购、入库、申领等全流程闭环开发，基于悲观锁解决高并发物资申领问题，并编写脚本实现新旧系统数据无缝割接。
+          - 使用Elasticsearch重构工单查询模块，支持全文检索与搜索建议，搜索效率提升80%；搭建Jenkins Pipeline实现自动化部署。
+      - name: HOWSO数藏
+        summary: 核心开发。基于 SpringBoot、Redis、Spring Cloud、RocketMQ、ElasticSearch、Canal
+        start_date: 2022-07
+        end_date: 2023-03
+        highlights:
+          - 从0到1参与数藏平台开发，负责藏品、订单、区块链等核心模块，主要设计了订单防重复提交、订单超时关单等功能。
+          - 基于ElasticSearch实现藏品搜索，解决模糊查询性能问题；修改Canal源码解决藏品同步过程时间转换异常。
+          - 引入XXL-JOB+线程池优化订单超时关单任务，将关单性能从10单/s优化到50单/s。
+          - 引入雪花算法+Redis自增ID生成唯一订单号；针对热点藏品引入缓存机制，接口RT从700ms提升到50ms。
+          - 基于AOP+自定义注解+Redisson实现分布式锁；对接联盟链（文昌链）实现藏品铸造及上链。
+      - name: 中国铁塔数字用车系统
+        summary: 核心开发。基于 Spring Cloud、MyBatis-Plus、Redis、达梦数据库
+        start_date: 2023-04
+        end_date: 2024-12
+        highlights:
+          - 采用数据脱敏及加密技术处理用户敏感数据；接入Sa-Token+Redis实现轻量级统一鉴权。
+          - 优化组织架构树查询逻辑，响应时间从2s降至0.5s，数据体积压缩30%。
+          - 基于Redis和Caffeine构建多级缓存机制提升查询效率；对接第三方短信接口，基于滑动窗口限流防刷。
+          - 实现产业园系统与用车系统数据无缝兼容，完成1万+历史工单迁移。
+    专业技能:
+      - label: 后端开发
+        details: 精通Java，熟悉JVM调优、并发编程、网络通信，深入理解Spring Boot/Cloud、MyBatis-Plus框架源码。
+      - label: 架构设计
+        details: 掌握分布式架构设计，熟悉分布式事务(Seata)、分布式锁(Redisson)，具备高并发场景实战经验。
+      - label: 数据库与缓存
+        details: 精通MySQL索引优化、事务隔离及分库分表，具备达梦数据库迁移调优经验；熟悉Redis核心数据结构、持久化策略及多级缓存落地。
+      - label: 中间件与工具
+        details: 熟练使用Kafka、RocketMQ保障消息可靠性；深入Nacos/Zookeeper服务治理机制；熟练使用Elasticsearch、DataX/Flink-CDC及Jenkins。
+
+design:
+  theme: classic
+locale:
+  language: english
+  present: 至今
+  year: 年
+  years: 年
+  month: 个月
+  months: 个月
+  month_names:
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+  month_abbreviations:
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+settings:
+  current_date: today
+  render_command:
+    output_folder: rendercv_output
+  bold_keywords: []
+  pdf_title: 方浩冉 - 简历
