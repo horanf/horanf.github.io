@@ -1,114 +1,161 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.7/schema.json
 cv:
-  name: 方浩冉
-  headline: Java开发工程师
-  location: 武汉
-  email: horaoen@gmail.com
-  photo:
-  phone: +86 15137667148
-  website: https://horanf.github.io
-  social_networks:
-    - network: GitHub
-      username: horanf
-  custom_connections:
-  sections:
-    个人总结:
-      - 3年Java开发经验：专注于后端开发，主导多个大型分布式系统设计与开发，具备丰富的微服务、高并发、数据库优化经验。
-      - 技术深度：深入理解Spring生态、MySQL调优、Redis高可用设计，具备复杂问题定位与性能优化能力。熟悉CAP、BASE等分布式理论，对于常见的分布式事务方案（如TCC、AP）有所了解。理解Spring Cloud Alibaba微服务架构，使用过 Nacos、Dubbo、Sentinel、Load Balancer等组件。
-      - 全流程经验：从需求分析到系统落地，主导项目全生命周期管理，擅长跨团队协作与技术方案落地。
-    教育背景:
-      - institution: 滁州学院
-        area: 计算机科学与技术
-        degree: 本科
-        start_date: 2019-09
-        end_date: 2023-07
-    工作经历:
-      - company: 南京华苏科技有限公司
-        position: Java开发工程师 / 项目组长
-        start_date: 2022-07
-        end_date: 2025-05
-        highlights:
-          - 主导中国铁塔产业园运营管理系统核心模块开发与团队管理，系统日均处理5000+工单，服务超10000用户。
-          - 负责HOWSO数藏系统核心模块开发，参与项目高可用高并发关键性技术问题设计和决策，实现最大峰值400QPS抢购功能。
-          - 负责中国铁塔数字用车系统全流程开发，优化后接口响应速度提升400%。
-    项目经验:
-      - name: 中国铁塔产业园运营管理系统
-        summary: 核心开发 / 项目组长。基于 Spring Cloud、MyBatis-Plus、MySQL/达梦、Redis、Elasticsearch
-        start_date: 2023-07
-        end_date: present
-        highlights:
-          - 基于Spring Cloud搭建微服务架构，集成Eureka服务注册与配置中心，保障系统高可用。使用MyBatis-Plus完成核心业务模块开发。
-          - 主导MySQL迁移至达梦数据库，完成数据迁移、SQL适配及性能调优；通过索引重建、批量执行等优化慢SQL，接口响应时间提升50%。
-          - 基于普元BPS流程平台封装通用流程服务，标准化20+工单流程；开发工单数据埋点功能，实现接单/处理超时等自动化提醒。
-          - 完成物资采购、入库、申领等全流程闭环开发，基于悲观锁解决高并发物资申领问题，并编写脚本实现新旧系统数据无缝割接。
-          - 使用Elasticsearch重构工单查询模块，支持全文检索与搜索建议，搜索效率提升80%；搭建Jenkins Pipeline实现自动化部署。
-      - name: HOWSO数藏
-        summary: 核心开发。基于 SpringBoot、Redis、Spring Cloud、RocketMQ、ElasticSearch、Canal
-        start_date: 2022-07
-        end_date: 2023-03
-        highlights:
-          - 从0到1参与数藏平台开发，负责藏品、订单、区块链等核心模块，主要设计了订单防重复提交、订单超时关单等功能。
-          - 基于ElasticSearch实现藏品搜索，解决模糊查询性能问题；修改Canal源码解决藏品同步过程时间转换异常。
-          - 引入XXL-JOB+线程池优化订单超时关单任务，将关单性能从10单/s优化到50单/s。
-          - 引入雪花算法+Redis自增ID生成唯一订单号；针对热点藏品引入缓存机制，接口RT从700ms提升到50ms。
-          - 基于AOP+自定义注解+Redisson实现分布式锁；对接联盟链（文昌链）实现藏品铸造及上链。
-      - name: 中国铁塔数字用车系统
-        summary: 核心开发。基于 Spring Cloud、MyBatis-Plus、Redis、达梦数据库
-        start_date: 2023-04
-        end_date: 2024-12
-        highlights:
-          - 采用数据脱敏及加密技术处理用户敏感数据；接入Sa-Token+Redis实现轻量级统一鉴权。
-          - 优化组织架构树查询逻辑，响应时间从2s降至0.5s，数据体积压缩30%。
-          - 基于Redis和Caffeine构建多级缓存机制提升查询效率；对接第三方短信接口，基于滑动窗口限流防刷。
-          - 实现产业园系统与用车系统数据无缝兼容，完成1万+历史工单迁移。
-    专业技能:
-      - label: 后端开发
-        details: 精通Java，熟悉JVM调优、并发编程、网络通信，深入理解Spring Boot/Cloud、MyBatis-Plus框架源码。
-      - label: 架构设计
-        details: 掌握分布式架构设计，熟悉分布式事务(Seata)、分布式锁(Redisson)，具备高并发场景实战经验。
-      - label: 数据库与缓存
-        details: 精通MySQL索引优化、事务隔离及分库分表，具备达梦数据库迁移调优经验；熟悉Redis核心数据结构、持久化策略及多级缓存落地。
-      - label: 中间件与工具
-        details: 熟练使用Kafka、RocketMQ保障消息可靠性；深入Nacos/Zookeeper服务治理机制；熟练使用Elasticsearch、DataX/Flink-CDC及Jenkins。
+    name: 方浩冉
+    headline: Java开发工程师
+    location: 武汉
+    email: horaoen@gmail.com
+    photo:
+    phone: +86 15137667148
+    website: https://horanf.github.io
+    social_networks:
+        - network: GitHub
+          username: horanf
+    custom_connections:
+    sections:
+        个人总结:
+            - 4年Java开发经验：独立主导多个大型分布式系统从0到1的架构设计与全流程开发，具备丰富的微服务、高并发、多数据库混合架构实战经验。
+            - 技术广度与深度：深入理解Spring Cloud Alibaba微服务生态（Nacos、Sentinel、Seata、Gateway），精通MyBatis-Plus与Spring Data MongoDB混合数据访问架构；掌握Redis多级缓存（Redisson + Caffeine）与Kafka消息驱动设计；具备MySQL、MongoDB、Elasticsearch、ClickHouse多数据库选型与调优能力。
+            - 全栈交付能力：独立完成从需求分析、技术选型、架构设计到容器化部署的全链路交付，具备Docker容器化及国产化数据库迁移（达梦）经验。
+            - AI工程化实践：基于LangChain4j + OpenAI兼容协议构建企业级智能问答与搜索服务，独立完成LLM模块的架构设计与业务集成。
+        教育背景:
+            - institution: 滁州学院
+              area: 计算机科学与技术
+              degree: 本科
+              start_date: 2019-09
+              end_date: 2023-07
+        工作经历:
+            - company: 北京东方国信科技股份有限公司
+              position: Java开发工程师
+              start_date: 2025-05
+              end_date: present
+              highlights:
+                  - 独立负责某社交互动学习平台（保密项目）从0到1的全架构设计与全模块开发，构建15+微服务系统，覆盖社交动态、积分激励、考试测评、IM、智能客服等核心业务，日均处理10万+请求。
+                  - 主导技术选型与架构决策，设计MySQL + MongoDB + Redis + Elasticsearch + ClickHouse混合多数据库架构，编写15+微服务Dockerfile实现容器化部署。
+                  - 基于LangChain4j + OpenAI兼容协议从0到1构建AI智能问答模块（JDK 21 + Spring Boot 3.x），集成语音识别与图像处理，支撑智能客服与全文检索场景。
+                  - 参与山西移动训推平台开发，负责大文件断点续传、APISIX网关流量转发配置、文件服务器注册管理等核心模块的设计与实现。
+            - company: 南京华苏科技有限公司
+              position: Java开发工程师 / 项目组长
+              start_date: 2022-07
+              end_date: 2025-05
+              highlights:
+                  - 主导中国铁塔产业园运营管理系统核心模块开发与团队管理，系统日均处理5000+工单，服务超10000用户。
+                  - 负责HOWSO数藏系统核心模块开发，参与项目高可用高并发关键性技术问题设计和决策，实现最大峰值400QPS抢购功能。
+                  - 负责中国铁塔数字用车系统全流程开发，优化后接口响应速度提升400%。
+        项目经验:
+            - name: 某社交互动学习平台（保密项目）
+              summary: 架构师 / 唯一后端开发。基于 Spring Cloud Alibaba、MyBatis-Plus、MongoDB、Redis、Elasticsearch、Kafka、LangChain4j
+              start_date: 2025-05
+              end_date: present
+              highlights:
+                  - 独立搭建15+微服务架构：以Nacos为注册与配置中心、Sentinel为熔断限流、Gateway统一鉴权与路由，设计JWT + Redis混合Token方案实现无状态鉴权与会话管理；网关层实现多级过滤器链（Auth → XSS → 黑名单 → 验证码 → Sentinel限流）。
+                  - 设计新旧系统双Token兼容过渡方案：网关同时解析旧系统App Token（自定义header）与新系统JWT（Authorization header），通过Redis缓存校验旧Token有效性后调用Auth服务动态兑换为标准JWT，兑换失败时自动回退至标准Token，实现用户账号迁移期间新旧客户端无感知共存。
+                  - 设计并实现积分激励系统（核心模块）：引入Seata AT模式实现积分转赠跨服务分布式事务，配合Redisson多键有序加锁（sender/receiver userId排序）规避死锁；基于AOP + SpEL表达式 + 自定义@DistributeLock注解封装通用分布式锁组件，统一收敛积分更新、兑换、过期等场景的并发控制。
+                  - 构建Kafka异步积分事件驱动链路：上游服务通过Kafka投递积分事件，消费者端实现基于topic:partition:offset的去重幂等机制；积分消费采用MongoDB聚合管道按过期时间FIFO扣减，保障用户积分优先消耗即将过期的部分。
+                  - 设计反作弊防刷体系：基于Redis Lua脚本实现固定时间窗口限流（INCR + PEXPIRE原子操作），结合setIfAbsent实现每日一次校验、RBucket时间戳实现最小间隔校验三种策略，可按任务维度灵活配置；违规记录异步落库，防刷检查前置到Kafka消费者入口，最小化无效请求资源消耗。
+                  - "实现社交动态内容审核流水线：设计可配置的四路审核分支（自动/人工/混合/关闭），基于TCC分布式事务跨social与feeds两服务协调审核状态流转（Try→标记审核中，Confirm/Cancel→透传终态），通过中间状态实现幂等与空回滚保护，无需引入Seata Fence表。"
+                  - 设计朋友圈CQRS读取模型：发布时通过Kafka异步扇出Timeline记录至每位接收者，读取时直接查询Timeline索引表反规范化到Feeds文档，实现写时扩散、读时聚合的读写分离；好友关系变更时通过Kafka事件触发时间线增量同步。
+                  - 构建多级缓存体系：基于JetCache + Caffeine(L1) + Redis/Redisson(L2)实现BOTH模式多级缓存，积分排行采用Redis Sorted Set实时更新 + 定时任务全量初始化，热点数据接口RT从600ms降至30ms；设计缓存预热与主动刷新策略，保障缓存一致性。
+                  - 编写15+微服务Dockerfile实现容器化部署，基于Nacos shared-configs机制抽取公共配置实现多环境（dev/test/uat/prod）统一管理，减少各服务配置冗余，支持环境间一键切换。
+                  - 搭建基于Testcontainers的集成测试基础设施：在通用测试模块中抽象MySQL、MongoDB、Redis、Kafka四容器通用基类，通过@DynamicPropertySource动态注入连接配置、Startables.deepStart()并行启动容器缩短启动时间；业务模块继承基类即可获得真实依赖环境，支撑Agent TDD开发与CI流水线自动化验证。
+            - name: 山西移动训推平台
+              summary: 核心开发。基于 Spring Boot、APISIX、Docker
+              start_date: 2025-11
+              end_date: 2025-12
+              highlights:
+                  - 设计并实现大文件断点续传功能，支持文件分片上传与断点恢复，保障大镜像文件在网络中断场景下的可靠传输；大文件上传完成后通过SSH远程登录目标服务器，执行Docker命令验证镜像完整性。
+                  - 基于APISIX网关配置流量转发规则，实现多服务路由分发与负载均衡。
+                  - 设计文件服务器注册管理中心，统一纳管多台文件服务器的SSH连接配置（地址、端口、密钥）；支持为不同账号分配独立的上传目录与读写权限，实现多租户文件隔离。
+            - name: 中国铁塔产业园运营管理系统
+              summary: 核心开发 / 项目组长。基于 Spring Cloud、MyBatis-Plus、MySQL/达梦、Redis、Elasticsearch
+              start_date: 2023-07
+              end_date: 2025-05
+              highlights:
+                  - 基于Spring Cloud搭建微服务架构，集成Eureka服务注册与配置中心，保障系统高可用。使用MyBatis-Plus完成核心业务模块开发。
+                  - 主导MySQL迁移至达梦数据库，完成数据迁移、SQL适配及性能调优；通过索引重建、批量执行等优化慢SQL，接口响应时间提升50%。
+                  - 基于普元BPS流程平台封装通用流程服务，标准化20+工单流程；开发工单数据埋点功能，实现接单/处理超时等自动化提醒。
+                  - 完成物资采购、入库、申领等全流程闭环开发，基于悲观锁解决高并发物资申领问题，并编写脚本实现新旧系统数据无缝割接。
+                  - 使用Elasticsearch重构工单查询模块，支持全文检索与搜索建议，搜索效率提升80%；搭建Jenkins Pipeline实现自动化部署。
+            - name: HOWSO数藏
+              summary: 核心开发。基于 SpringBoot、Redis、Spring Cloud、RocketMQ、ElasticSearch、Canal
+              start_date: 2022-07
+              end_date: 2023-03
+              highlights:
+                  - 从0到1参与数藏平台开发，负责藏品、订单、区块链等核心模块，主要设计了订单防重复提交、订单超时关单等功能。
+                  - 基于ElasticSearch实现藏品搜索，解决模糊查询性能问题；修改Canal源码解决藏品同步过程时间转换异常。
+                  - 引入XXL-JOB+线程池优化订单超时关单任务，将关单性能从10单/s优化到50单/s。
+                  - 引入雪花算法+Redis自增ID生成唯一订单号；针对热点藏品引入缓存机制，接口RT从700ms提升到50ms。
+                  - 基于AOP+自定义注解+Redisson实现分布式锁；对接联盟链（文昌链）实现藏品铸造及上链。
+            - name: 中国铁塔数字用车系统
+              summary: 核心开发。基于 Spring Cloud、MyBatis-Plus、Redis、达梦数据库
+              start_date: 2023-04
+              end_date: 2024-12
+              highlights:
+                  - 采用数据脱敏及加密技术处理用户敏感数据；接入Sa-Token+Redis实现轻量级统一鉴权。
+                  - 优化组织架构树查询逻辑，响应时间从2s降至0.5s，数据体积压缩30%。
+                  - 基于Redis和Caffeine构建多级缓存机制提升查询效率；对接第三方短信接口，基于滑动窗口限流防刷。
+                  - 实现产业园系统与用车系统数据无缝兼容，完成1万+历史工单迁移。
+        专业技能:
+            - label: 后端开发
+              details: 精通Java，熟悉JVM调优、并发编程、网络通信，深入理解Spring Boot/Cloud Alibaba、MyBatis-Plus框架原理与源码。
+            - label: 架构设计
+              details: 掌握微服务架构设计，熟悉分布式事务（Seata AT/TCC）、分布式锁（Redisson），具备15+微服务独立架构与高并发场景实战经验。
+            - label: 数据库与缓存
+              details: 精通MySQL索引优化、事务隔离及SQL调优，具备达梦国产数据库迁移经验；掌握MongoDB文档数据库设计与聚合管道查询优化；熟悉Redis核心数据结构、持久化策略及Redisson + Caffeine多级缓存落地。
+            - label: 中间件与搜索
+              details: 熟练使用Kafka实现异步解耦与事件驱动架构；深入Nacos服务治理机制；精通Elasticsearch全文检索与聚合分析；具备ClickHouse时序数据分析经验。
+            - label: AI工程化
+              details: 熟悉LangChain4j框架，具备OpenAI兼容协议对接经验；独立完成LLM模块架构设计与业务集成，掌握JDK 21新特性。
 
 design:
-  theme: classic
+    theme: classic
+    typography:
+        line_spacing: 0.9em
+    entries:
+        date_and_location_width: 2.8cm
+        highlights:
+            space_between_items: 0.3em # bullet points 之间，默认 0cm
+            space_above: 0.2em # bullet 列表上方留白
+        summary:
+            space_above: 0.15em
+    templates:
+        single_date: "YEAR.MONTH"
+        date_range: "START_DATE – END_DATE"
 locale:
-  language: english
-  present: 至今
-  year: 年
-  years: 年
-  month: 个月
-  months: 个月
-  month_names:
-    - 1月
-    - 2月
-    - 3月
-    - 4月
-    - 5月
-    - 6月
-    - 7月
-    - 8月
-    - 9月
-    - 10月
-    - 11月
-    - 12月
-  month_abbreviations:
-    - 1月
-    - 2月
-    - 3月
-    - 4月
-    - 5月
-    - 6月
-    - 7月
-    - 8月
-    - 9月
-    - 10月
-    - 11月
-    - 12月
+    language: mandarin_chinese
+    present: 至今
+    year: 年
+    years: 年
+    month: 个月
+    months: 个月
+    month_names:
+        - 1月
+        - 2月
+        - 3月
+        - 4月
+        - 5月
+        - 6月
+        - 7月
+        - 8月
+        - 9月
+        - 10月
+        - 11月
+        - 12月
+    month_abbreviations:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
 settings:
-  current_date: today
-  render_command:
-    output_folder: rendercv_output
-  bold_keywords: []
-  pdf_title: 方浩冉 - 简历
+    current_date: today
+    render_command:
+        output_folder: rendercv_output
+    bold_keywords: []
+    pdf_title: 方浩冉 - 简历
