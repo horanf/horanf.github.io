@@ -42,7 +42,7 @@ onMounted(() => {
 
     <iframe
       ref="iframeRef"
-      src="/cv/fanghaoran_CV.html"
+      :src="`/cv/fanghaoran_CV.html?v=${Date.now()}`"
       :style="{ height: iframeHeight ? `${iframeHeight}px` : '100vh' }"
       :class="{ invisible: loading }"
       class="cv-iframe"
