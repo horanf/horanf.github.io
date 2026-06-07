@@ -34,7 +34,7 @@ cv:
           - 基于LangChain4j + OpenAI兼容协议从0到1构建AI智能问答模块（JDK 21 + Spring Boot 3.x），集成语音识别与图像处理，支撑智能客服与全文检索场景。
           - 参与山西移动训推平台开发，负责大文件断点续传、APISIX网关流量转发配置、文件服务器注册管理等核心模块的设计与实现。
       - company: 南京华苏科技有限公司
-        position: Java开发工程师 / 项目组长
+        position: Java开发工程师
         start_date: 2022-07
         end_date: 2025-05
         highlights:
@@ -66,7 +66,7 @@ cv:
           - 基于APISIX网关配置流量转发规则，实现多服务路由分发与负载均衡。
           - 设计文件服务器注册管理中心，统一纳管多台文件服务器的SSH连接配置（地址、端口、密钥）；支持为不同账号分配独立的上传目录与读写权限，实现多租户文件隔离。
       - name: 中国铁塔产业园运营管理系统
-        summary: 核心开发 / 项目组长。基于 Spring Cloud、MyBatis-Plus、MySQL/达梦、Redis、Elasticsearch
+        summary: 核心开发。基于 Spring Cloud、MyBatis-Plus、MySQL/达梦、Redis、Elasticsearch
         start_date: 2023-07
         end_date: 2025-05
         highlights:
