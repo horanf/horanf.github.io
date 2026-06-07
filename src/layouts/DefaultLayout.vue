@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { BegoniaTheme } from '@horanf/begonia-theme'
-import '@horanf/begonia-theme/style.css'
+import { BegoniaTheme } from '@/theme'
 import { storeToRefs } from 'pinia'
 import { useThemeStore } from '@/stores/theme'
 import FooterBar from '@/components/FooterBar.vue'
